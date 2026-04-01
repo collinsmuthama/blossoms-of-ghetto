@@ -81,7 +81,7 @@ const Contact = () => {
       {/* Map Section */}
       <section className="py-20 md:py-28 bg-card">
         <div className="container max-w-5xl">
-          <SectionHeading title="Find Us" subtitle="Visit us in Mathare, Nairobi" centered />
+          <SectionHeading title="Find Us" subtitle="Visit us in Mathare, Nairobi" />
           <div className="rounded-xl overflow-hidden shadow-md border h-[400px] md:h-[500px]">
             <iframe
               title="Blossoms of Ghetto Location - Mathare, Nairobi"
