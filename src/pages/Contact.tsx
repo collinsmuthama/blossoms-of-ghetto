@@ -77,6 +77,25 @@ const Contact = () => {
           </div>
         </div>
       </section>
+
+      {/* Map Section */}
+      <section className="py-20 md:py-28 bg-card">
+        <div className="container max-w-5xl">
+          <SectionHeading title="Find Us" subtitle="Visit us in Mathare, Nairobi" />
+          <div className="rounded-xl overflow-hidden shadow-md border h-[400px] md:h-[500px]">
+            <iframe
+              title="Blossoms of Ghetto Location - Mathare, Nairobi"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.17642982088!2d36.8550!3d-1.2600!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f17338e17e381%3A0x3e53b3c3c1b3e8!2sMathare%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1700000000000!5m2!1sen!2ske"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+        </div>
+      </section>
     </main>
   );
 };
