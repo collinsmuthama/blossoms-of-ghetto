@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Heart, Utensils, BookOpen, Users, HandHeart, ArrowRight } from "lucide-react";
+import { Heart, Utensils, BookOpen, Users, HandHeart, ArrowRight, RefreshCw, ShieldCheck, HeartPulse, Briefcase, Megaphone, Handshake, Siren, Lightbulb, Home, Trophy, Tent, Goal } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import HeroCarousel from "@/components/HeroCarousel";
 import SectionHeading from "@/components/SectionHeading";
@@ -15,6 +15,21 @@ const programs = [
   { icon: BookOpen, title: "Holiday Programs", desc: "Safe, engaging spaces during school holidays through arts, games, and sports." },
   { icon: Users, title: "Mentorship", desc: "Life skills guidance, personal development, and education support." },
   { icon: HandHeart, title: "Community Outreach", desc: "Food, basic needs, and emergency support for vulnerable areas." },
+];
+
+const activities = [
+  { icon: RefreshCw, title: "Rehabilitation & Reintegration", desc: "Supporting individuals to rebuild their lives and reintegrate into the community." },
+  { icon: ShieldCheck, title: "Education & Protection", desc: "Ensuring access to quality education and child protection services." },
+  { icon: HeartPulse, title: "Health", desc: "Health awareness, basic medical support, and wellness programs." },
+  { icon: Briefcase, title: "Economic Empowerment", desc: "Skills training and livelihood support for sustainable self-reliance." },
+  { icon: Megaphone, title: "Advocacy", desc: "Championing the rights of children and vulnerable communities." },
+  { icon: Handshake, title: "Partnership & Networking", desc: "Building alliances with organizations for greater collective impact." },
+  { icon: Siren, title: "Emergency Response", desc: "Rapid assistance during crises and disaster situations." },
+  { icon: Lightbulb, title: "Life Skills", desc: "Equipping youth with practical skills for everyday decision-making." },
+  { icon: Home, title: "Social Welfare", desc: "Providing social support services to families and individuals in need." },
+  { icon: Trophy, title: "Sports & Culture", desc: "Promoting talent, teamwork, and cultural expression through sports and arts." },
+  { icon: Tent, title: "Kids Camp", desc: "Fun, safe camp experiences that inspire learning and adventure." },
+  { icon: Goal, title: "Slums Soccer", desc: "Football programs that unite communities and nurture young talent." },
 ];
 
 const stats = [
@@ -79,6 +94,28 @@ const Index = () => (
                 <p.icon className="w-10 h-10 text-secondary mb-4" />
                 <h3 className="font-display text-xl font-semibold mb-3">{p.title}</h3>
                 <p className="text-primary-foreground/80 text-sm leading-relaxed">{p.desc}</p>
+              </div>
+            </ScrollReveal>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* Activities */}
+    <section className="py-20 md:py-28 section-pattern">
+      <div className="container">
+        <ScrollReveal>
+          <SectionHeading title="Our Activities" subtitle="Comprehensive programs driving lasting change across the community" />
+        </ScrollReveal>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {activities.map((a, i) => (
+            <ScrollReveal key={a.title} delay={i * 80} direction="scale">
+              <div className="bg-card rounded-xl p-6 border shadow-sm hover:shadow-lg hover:-translate-y-2 transition-all duration-300 group">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
+                  <a.icon className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
+                </div>
+                <h3 className="font-display text-lg font-semibold mb-2 text-foreground">{a.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{a.desc}</p>
               </div>
             </ScrollReveal>
           ))}
