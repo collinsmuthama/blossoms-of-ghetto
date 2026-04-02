@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Heart, Utensils, BookOpen, Users, HandHeart, ArrowRight } from "lucide-react";
+import { Heart, Utensils, BookOpen, Users, HandHeart, ArrowRight, RefreshCw, ShieldCheck, HeartPulse, Briefcase, Megaphone, Handshake, Siren, Lightbulb, Home, Trophy, Tent, Goal } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import HeroCarousel from "@/components/HeroCarousel";
 import SectionHeading from "@/components/SectionHeading";
@@ -15,6 +15,21 @@ const programs = [
   { icon: BookOpen, title: "Holiday Programs", desc: "Safe, engaging spaces during school holidays through arts, games, and sports." },
   { icon: Users, title: "Mentorship", desc: "Life skills guidance, personal development, and education support." },
   { icon: HandHeart, title: "Community Outreach", desc: "Food, basic needs, and emergency support for vulnerable areas." },
+];
+
+const activities = [
+  { icon: RefreshCw, title: "Rehabilitation & Reintegration", desc: "Supporting individuals to rebuild their lives and reintegrate into the community." },
+  { icon: ShieldCheck, title: "Education & Protection", desc: "Ensuring access to quality education and child protection services." },
+  { icon: HeartPulse, title: "Health", desc: "Health awareness, basic medical support, and wellness programs." },
+  { icon: Briefcase, title: "Economic Empowerment", desc: "Skills training and livelihood support for sustainable self-reliance." },
+  { icon: Megaphone, title: "Advocacy", desc: "Championing the rights of children and vulnerable communities." },
+  { icon: Handshake, title: "Partnership & Networking", desc: "Building alliances with organizations for greater collective impact." },
+  { icon: Siren, title: "Emergency Response", desc: "Rapid assistance during crises and disaster situations." },
+  { icon: Lightbulb, title: "Life Skills", desc: "Equipping youth with practical skills for everyday decision-making." },
+  { icon: Home, title: "Social Welfare", desc: "Providing social support services to families and individuals in need." },
+  { icon: Trophy, title: "Sports & Culture", desc: "Promoting talent, teamwork, and cultural expression through sports and arts." },
+  { icon: Tent, title: "Kids Camp", desc: "Fun, safe camp experiences that inspire learning and adventure." },
+  { icon: Goal, title: "Slums Soccer", desc: "Football programs that unite communities and nurture young talent." },
 ];
 
 const stats = [
