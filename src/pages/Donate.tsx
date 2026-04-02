@@ -1,23 +1,51 @@
 import { useState } from "react";
-import { Heart, CreditCard, Phone, Building } from "lucide-react";
+import { Heart, CreditCard, Phone, Building, ExternalLink, Smartphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import SectionHeading from "@/components/SectionHeading";
 import { useToast } from "@/hooks/use-toast";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
 
 const amounts = [500, 1000, 2500, 5000, 10000];
 
 const Donate = () => {
   const [selectedAmount, setSelectedAmount] = useState<number | null>(1000);
   const [customAmount, setCustomAmount] = useState("");
+  const [mpesaOpen, setMpesaOpen] = useState(false);
+  const [mpesaPhone, setMpesaPhone] = useState("");
+  const [mpesaLoading, setMpesaLoading] = useState(false);
+  const [mpesaSent, setMpesaSent] = useState(false);
   const { toast } = useToast();
 
+  const donationAmount = customAmount ? parseInt(customAmount) : selectedAmount;
+
   const handleDonate = () => {
-    const amount = customAmount ? parseInt(customAmount) : selectedAmount;
-    toast({
-      title: "Thank you for your generosity! 🌸",
-      description: `Your donation of KES ${amount?.toLocaleString()} will make a real difference.`,
-    });
+    if (!donationAmount || donationAmount <= 0) {
+      toast({ title: "Please select or enter an amount", variant: "destructive" });
+      return;
+    }
+    setMpesaOpen(true);
+    setMpesaSent(false);
+    setMpesaPhone("");
+  };
+
+  const handleMpesaSend = () => {
+    if (!mpesaPhone || mpesaPhone.length < 10) {
+      toast({ title: "Please enter a valid phone number", variant: "destructive" });
+      return;
+    }
+    setMpesaLoading(true);
+    // Simulate STK push
+    setTimeout(() => {
+      setMpesaLoading(false);
+      setMpesaSent(true);
+    }, 2000);
   };
 
   return (
@@ -62,17 +90,30 @@ const Donate = () => {
               />
             </div>
 
-            <Button onClick={handleDonate} size="lg" className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 gap-2 text-lg py-6">
-              <Heart className="w-5 h-5" /> Donate Now
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Button onClick={handleDonate} size="lg" className="flex-1 bg-[#4CAF50] text-white hover:bg-[#43A047] gap-2 text-lg py-6">
+                <Smartphone className="w-5 h-5" /> Pay with M-Pesa
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                className="flex-1 bg-secondary text-secondary-foreground hover:bg-secondary/90 gap-2 text-lg py-6"
+              >
+                <a href="https://gofundme.com" target="_blank" rel="noopener noreferrer">
+                  <Heart className="w-5 h-5" /> GoFundMe
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              </Button>
+            </div>
           </div>
 
           {/* Payment methods info */}
           <div className="mt-16">
             <SectionHeading title="How to Donate" subtitle="Choose the method that works best for you" />
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-4 gap-6">
               {[
-                { icon: Phone, title: "M-Pesa", desc: "Send to Paybill/Till number. Contact us for details." },
+                { icon: Smartphone, title: "M-Pesa", desc: "Pay instantly via M-Pesa STK push. Select amount and tap Pay." },
+                { icon: Heart, title: "GoFundMe", desc: "Donate through our GoFundMe campaign page with card or PayPal." },
                 { icon: CreditCard, title: "Bank Transfer", desc: "Direct bank transfer. Reach out for account details." },
                 { icon: Building, title: "In-Kind Donations", desc: "Food, books, supplies — we welcome all support." },
               ].map((m) => (
@@ -88,6 +129,79 @@ const Donate = () => {
           </div>
         </div>
       </section>
+
+      {/* M-Pesa STK Push Dialog */}
+      <Dialog open={mpesaOpen} onOpenChange={setMpesaOpen}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle className="flex items-center gap-2 text-xl">
+              <Smartphone className="w-6 h-6 text-[#4CAF50]" />
+              M-Pesa Payment
+            </DialogTitle>
+            <DialogDescription>
+              {!mpesaSent
+                ? `Pay KES ${donationAmount?.toLocaleString()} via M-Pesa Lipa Na M-Pesa`
+                : "STK Push sent to your phone"}
+            </DialogDescription>
+          </DialogHeader>
+
+          {!mpesaSent ? (
+            <div className="space-y-4 pt-2">
+              <div className="bg-muted rounded-lg p-4 text-center">
+                <p className="text-sm text-muted-foreground mb-1">Amount</p>
+                <p className="text-3xl font-bold text-foreground">KES {donationAmount?.toLocaleString()}</p>
+              </div>
+              <div>
+                <label className="text-sm font-medium text-foreground mb-1.5 block">M-Pesa Phone Number</label>
+                <Input
+                  type="tel"
+                  placeholder="e.g. 0712345678"
+                  value={mpesaPhone}
+                  onChange={(e) => setMpesaPhone(e.target.value)}
+                  className="text-lg py-5"
+                />
+              </div>
+              <Button
+                onClick={handleMpesaSend}
+                disabled={mpesaLoading}
+                className="w-full bg-[#4CAF50] text-white hover:bg-[#43A047] py-5 text-lg"
+              >
+                {mpesaLoading ? (
+                  <span className="flex items-center gap-2">
+                    <span className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                    Sending STK Push...
+                  </span>
+                ) : (
+                  "Send Payment Request"
+                )}
+              </Button>
+              <p className="text-xs text-muted-foreground text-center">
+                You will receive an M-Pesa prompt on your phone to complete the payment.
+              </p>
+            </div>
+          ) : (
+            <div className="text-center py-6 space-y-4">
+              <div className="w-16 h-16 bg-[#4CAF50]/10 rounded-full flex items-center justify-center mx-auto">
+                <Phone className="w-8 h-8 text-[#4CAF50]" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-lg text-foreground">Check Your Phone</h3>
+                <p className="text-muted-foreground text-sm mt-1">
+                  An M-Pesa STK push has been sent to <strong>{mpesaPhone}</strong>.
+                  Enter your M-Pesa PIN to complete the donation.
+                </p>
+              </div>
+              <Button
+                variant="outline"
+                onClick={() => { setMpesaOpen(false); toast({ title: "Thank you for your generosity! 🌸", description: `Your donation of KES ${donationAmount?.toLocaleString()} will make a real difference.` }); }}
+                className="mt-2"
+              >
+                Done
+              </Button>
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
     </main>
   );
 };
