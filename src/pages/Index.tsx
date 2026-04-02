@@ -101,6 +101,28 @@ const Index = () => (
       </div>
     </section>
 
+    {/* Activities */}
+    <section className="py-20 md:py-28 section-pattern">
+      <div className="container">
+        <ScrollReveal>
+          <SectionHeading title="Our Activities" subtitle="Comprehensive programs driving lasting change across the community" />
+        </ScrollReveal>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {activities.map((a, i) => (
+            <ScrollReveal key={a.title} delay={i * 80} direction="scale">
+              <div className="bg-card rounded-xl p-6 border shadow-sm hover:shadow-lg hover:-translate-y-2 transition-all duration-300 group">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
+                  <a.icon className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
+                </div>
+                <h3 className="font-display text-lg font-semibold mb-2 text-foreground">{a.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{a.desc}</p>
+              </div>
+            </ScrollReveal>
+          ))}
+        </div>
+      </div>
+    </section>
+
     {/* Stats */}
     <section className="py-16 bg-secondary">
       <div className="container">
