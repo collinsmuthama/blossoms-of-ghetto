@@ -120,42 +120,42 @@ const Donate = () => {
                 <p className="text-muted-foreground text-sm mb-4">Pay instantly via M-Pesa STK push or use the details below:</p>
                 <div className="bg-muted/50 rounded-lg p-4 text-left space-y-3">
                   <div>
-                    <span className="text-muted-foreground text-xs uppercase tracking-wide block">Paybill No.</span>
-                    <span className="font-bold text-foreground text-xl block">522533</span>
+                    <span className="text-muted-foreground text-xs uppercase  mx-4">Paybill No.</span>
+                    <span className="font-bold text-foreground text-xl ">522533</span>
                   </div>
                   <div className="border-t border-border" />
                   <div>
-                    <span className="text-muted-foreground text-xs uppercase tracking-wide block">Account No.</span>
-                    <span className="font-bold text-foreground text-xl block">7877206</span>
+                    <span className="text-muted-foreground text-xs uppercase mx-4">Account No.</span>
+                    <span className="font-bold text-foreground text-xl">7877206</span>
                   </div>
                 </div>
               </div>
 
               {/* Bank Transfer Card */}
               <div className="bg-card rounded-xl p-8 border text-center">
-                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto  mb-4">
                   <CreditCard className="w-7 h-7 text-primary" />
                 </div>
                 <h3 className="font-display font-semibold text-lg mb-3">Bank Transfer</h3>
-                <div className="bg-muted/50 rounded-lg p-4 text-left space-y-3">
+                <div className="bg-muted/50 rounded-lg  text-left space-y-3">
                   <div>
-                    <span className="text-muted-foreground text-xs uppercase tracking-wide block">Bank</span>
-                    <span className="font-semibold text-foreground block">Kenya Commercial Bank (KCB)</span>
+                    <span className="text-muted-foreground uppercase">Bank</span>
+                    <span className="font-semibold text-foreground mx-2">Kenya Commercial Bank</span>
                   </div>
                   <div className="border-t border-border" />
                   <div>
-                    <span className="text-muted-foreground text-xs uppercase tracking-wide block">Account Name</span>
-                    <span className="font-semibold text-foreground block">Blossoms of Ghetto</span>
+                    <span className="text-muted-foreground  uppercase mx-2">Account</span>
+                    <span className="font-semibold text-foreground">Blossoms of Ghetto</span>
                   </div>
                   <div className="border-t border-border" />
                   <div>
-                    <span className="text-muted-foreground text-xs uppercase tracking-wide block">Account No.</span>
-                    <span className="font-bold text-foreground text-xl block">1330069609</span>
+                    <span className="text-muted-foreground uppercase mx-2">Account No.</span>
+                    <span className="font-bold text-foreground text-md">1330069609</span>
                   </div>
                   <div className="border-t border-border" />
                   <div>
-                    <span className="text-muted-foreground text-xs uppercase tracking-wide block">Swift Code</span>
-                    <span className="font-bold text-foreground text-lg block">KCBLKENX</span>
+                    <span className="text-muted-foreground uppercase mx-2">Swift Code</span>
+                    <span className="font-bold text-foreground text-md">KCBLKENX</span>
                   </div>
                 </div>
               </div>
