@@ -118,15 +118,15 @@ const Donate = () => {
                 </div>
                 <h3 className="font-display font-semibold text-lg mb-3">M-Pesa</h3>
                 <p className="text-muted-foreground text-sm mb-4">Pay instantly via M-Pesa STK push or use the details below:</p>
-                <div className="bg-muted/50 rounded-lg p-4 text-left space-y-2">
-                  <div className="flex justify-between items-center">
-                    <span className="text-muted-foreground text-sm">Paybill No.</span>
-                    <span className="font-bold text-foreground text-lg">522533</span>
+                <div className="bg-muted/50 rounded-lg p-4 text-left space-y-3">
+                  <div>
+                    <span className="text-muted-foreground text-xs uppercase tracking-wide block">Paybill No.</span>
+                    <span className="font-bold text-foreground text-xl block">522533</span>
                   </div>
                   <div className="border-t border-border" />
-                  <div className="flex justify-between items-center">
-                    <span className="text-muted-foreground text-sm">Account No.</span>
-                    <span className="font-bold text-foreground text-lg">7877206</span>
+                  <div>
+                    <span className="text-muted-foreground text-xs uppercase tracking-wide block">Account No.</span>
+                    <span className="font-bold text-foreground text-xl block">7877206</span>
                   </div>
                 </div>
               </div>
