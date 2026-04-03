@@ -4,11 +4,16 @@ import { Button } from "@/components/ui/button";
 import HeroCarousel from "@/components/HeroCarousel";
 import SectionHeading from "@/components/SectionHeading";
 import ScrollReveal from "@/components/ScrollReveal";
-import hero3 from "@/assets/hero-3.jpg";
-import partnerCommunity from "@/assets/partner-community.png";
-import partnerChurches from "@/assets/partner-churches.png";
-import partnerDonors from "@/assets/partner-donors.png";
-import partnerVolunteers from "@/assets/partner-volunteers.png";
+import whoweare from "@/assets/images/g1/whoweare.jpeg";
+import Alive from "@/assets/logos/Alive.jpg";
+import Istreet from "@/assets/logos/Istreet.jpg";
+import moo from "@/assets/logos/moo.jpg";
+import serve from "@/assets/logos/Serve.jpg";
+import startWithMe from "@/assets/logos/Startswithme.jpg";
+import The from "@/assets/logos/The.jpg";
+import cheerfull from "@/assets/logos/cheerfull.jpg";
+import kids from "@/assets/logos/kids.jpg";
+import hero from "@/assets/logos/hero.jpg";
 
 const programs = [
   { icon: Utensils, title: "Feeding Program", desc: "Regular meals for children and vulnerable families facing food insecurity." },
@@ -40,10 +45,15 @@ const stats = [
 ];
 
 const partners = [
-  { name: "Community Partners", logo: partnerCommunity },
-  { name: "Local Churches", logo: partnerChurches },
-  { name: "International Donors", logo: partnerDonors },
-  { name: "Volunteer Networks", logo: partnerVolunteers },
+  { name: "Istreet Charity", logo: Istreet },
+  { name: "Hope Alive Pioneer Organization", logo: Alive },
+  { name: "The Kenya Scouts Association", logo: The },
+  { name: "Live More Local Charity", logo: moo },
+  { name: "Serve The Street", logo: serve },
+  { name: "Mind Your Community", logo: startWithMe }, 
+  { name: "Cheerfull Hearts", logo: cheerfull },
+  { name : "Kids 254", logo: kids },
+  { name : 'Hero In Action' , logo: hero },
 ];
 
 const Index = () => (
@@ -70,7 +80,7 @@ const Index = () => (
           </ScrollReveal>
           <ScrollReveal direction="left">
             <div className="relative">
-              <img src={hero3} alt="Children at Blossoms of Ghetto" className="rounded-2xl shadow-xl" width={800} height={533} loading="lazy" />
+              <img src={whoweare} alt="Children at Blossoms of Ghetto" className="rounded-2xl shadow-xl" width={800} height={533} loading="lazy" />
               <div className="absolute -bottom-6 -left-6 bg-secondary text-secondary-foreground rounded-xl p-6 shadow-lg hidden md:block">
                 <p className="font-display text-2xl font-bold">Since 2024</p>
                 <p className="text-sm">Serving Mathare Community</p>
@@ -187,7 +197,7 @@ const Index = () => (
         <ScrollReveal>
           <SectionHeading title="Our Partners" subtitle="We are grateful for the support of friends and organizations" />
         </ScrollReveal>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center max-w-4xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 items-center max-w-4xl mx-auto">
           {partners.map((p, i) => (
             <ScrollReveal key={p.name} delay={i * 120} direction="scale">
               <div className="bg-background rounded-xl p-8 text-center shadow-sm border hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">

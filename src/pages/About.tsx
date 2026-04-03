@@ -1,7 +1,7 @@
 import { Heart, Eye, Target, Users } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
-import hero1 from "@/assets/hero-1.jpg";
-import hero4 from "@/assets/hero-4.jpg";
+import aboutUs from "@/assets/images/g1/about.jpeg";
+import us from "@/assets/images/g1/us.jpeg";
 
 const values = [
   { icon: Heart, title: "Empathy", desc: "Leading with understanding rooted in lived experience" },
@@ -14,7 +14,7 @@ const About = () => (
   <main className="pt-20">
     {/* Hero */}
     <section className="relative py-20 md:py-32 overflow-hidden">
-      <img src={hero1} alt="Blossoms of Ghetto children" className="absolute inset-0 w-full h-full object-cover" />
+      <img src={aboutUs} alt="Blossoms of Ghetto children" className="absolute inset-0 w-full h-full object-cover" />
       <div className="absolute inset-0 hero-overlay" />
       <div className="relative z-10 container text-center">
         <h1 className="text-4xl md:text-6xl font-display font-bold text-primary-foreground mb-4">About Us</h1>
@@ -33,7 +33,7 @@ const About = () => (
             <p>Blossoms of Ghetto is a community-based organization founded in June 2024 and based in Mathare, Nairobi, Kenya. It was started with a simple but powerful vision: to create a safe, supportive, and empowering space for children and families living in vulnerable conditions.</p>
             <p>What makes us unique is that we are built on lived experience. Our founder, Peter Kimani, grew up facing the realities of street life and understands firsthand the challenges many children in Mathare go through—hunger, lack of safe spaces, limited access to education, and exposure to difficult environments.</p>
           </div>
-          <img src={hero4} alt="Community outreach" className="rounded-2xl shadow-xl" loading="lazy" />
+          <img src={us} alt="Community outreach" className="rounded-2xl shadow-xl" loading="lazy" />
         </div>
       </div>
     </section>

@@ -2,20 +2,111 @@ import { useState, useCallback } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 import ScrollReveal from "@/components/ScrollReveal";
-import hero1 from "@/assets/hero-1.jpg";
-import hero2 from "@/assets/hero-2.jpg";
-import hero3 from "@/assets/hero-3.jpg";
-import hero4 from "@/assets/hero-4.jpg";
+import imag1 from "@/assets/images/g1/11.jpeg";
+import imag2 from "@/assets/images/g1/21.jpeg";
+import imag3 from "@/assets/images/g1/31.jpeg";
+import imag4 from "@/assets/images/g1/41.jpeg";
+import imag5 from "@/assets/images/g1/51.jpeg";
+import imag6 from "@/assets/images/g1/61.jpeg";
+import imag7 from "@/assets/images/g1/71.jpeg";
+import imag9 from "@/assets/images/g1/91.jpeg";
+import imag10 from "@/assets/images/g1/101.jpeg"; 
+import imag11 from "@/assets/images/g1/111.jpeg";
+import imag12 from "@/assets/images/g1/121.jpeg";     
+import imag13 from "@/assets/images/g1/131.jpeg";
+import imag14 from "@/assets/images/g1/141.jpeg";
+import imag15 from "@/assets/images/g1/151.jpeg";
+import imag16 from "@/assets/images/g1/161.jpeg";
+import imag17 from "@/assets/images/g1/171.jpeg";
+import imag18 from "@/assets/images/g1/181.jpeg";
+import imag19 from "@/assets/images/g1/191.jpeg";
+import imag20 from "@/assets/images/g1/201.jpeg";     
+import imag21 from "@/assets/images/g1/211.jpeg";
+import imag22 from "@/assets/images/g1/221.jpeg";
+import imag23 from "@/assets/images/g1/231.jpeg";
+import imag24 from "@/assets/images/g1/241.jpeg";
+import imag25 from "@/assets/images/g1/251.jpeg";
+import imag26 from "@/assets/images/g1/261.jpeg";
+import imag27 from "@/assets/images/g1/271.jpeg";
+import imag28 from "@/assets/images/g1/281.jpeg";
+import imag29 from "@/assets/images/g1/291.jpeg";
+import imag30 from "@/assets/images/g1/301.jpeg"; 
+import imag31 from "@/assets/images/g1/311.jpeg";
+import imag32 from "@/assets/images/g1/321.jpeg";
+import imag33 from "@/assets/images/g1/331.jpeg";
+import imag34 from "@/assets/images/g1/341.jpeg";
+import imag35 from "@/assets/images/g1/351.jpeg";     
+import imag37 from "@/assets/images/g1/371.jpeg";
+import imag38 from "@/assets/images/g1/381.jpeg";   
+import imag39 from "@/assets/images/g1/391.jpeg";
+import imag40 from "@/assets/images/g1/401.jpeg";
+import imag41 from "@/assets/images/g1/411.jpeg";
+import imag42 from "@/assets/images/g1/421.jpeg";
+import imag43 from "@/assets/images/g1/431.jpeg";
+import imag44 from "@/assets/images/g1/441.jpeg";
+import imag45 from "@/assets/images/g1/451.jpeg";
+import imag46 from "@/assets/images/g1/461.jpeg";
+import imag47 from "@/assets/images/g1/471.jpeg";
+import imag49 from "@/assets/images/g1/491.jpeg"; 
+import imag50 from "@/assets/images/g1/501.jpeg"; 
+import imag51 from "@/assets/images/g1/511.jpeg";
+import imag52 from "@/assets/images/g1/521.jpeg";
+import imag53 from "@/assets/images/g1/531.jpeg";
+import imag54 from "@/assets/images/g1/541.jpeg";   
+
 
 const images = [
-  { src: hero1, alt: "Children playing and smiling" },
-  { src: hero2, alt: "Community feeding program" },
-  { src: hero3, alt: "Arts and crafts activities" },
-  { src: hero4, alt: "Community outreach" },
-  { src: hero1, alt: "Happy children of Mathare" },
-  { src: hero2, alt: "Volunteers serving meals" },
-  { src: hero3, alt: "Creative learning sessions" },
-  { src: hero4, alt: "Distribution of supplies" },
+  { src: imag1, alt: "Children playing and smiling" },
+  { src: imag2, alt: "Community feeding program" },
+  { src: imag3, alt: "Arts and crafts activities" },
+  { src: imag4, alt: "Community outreach" },
+  { src: imag5, alt: "Happy children of Mathare" },
+  { src: imag6, alt: "Volunteers serving meals" },
+  { src: imag7, alt: "Creative learning sessions" },
+  { src: imag9, alt: "Children enjoying meals" },
+  { src: imag10, alt: "Mentorship and guidance" },
+  { src: imag11, alt: "Community gatherings" },   
+  { src: imag12, alt: "Children in safe spaces" },  
+  { src: imag13, alt: "Educational activities" },
+  { src: imag14, alt: "Volunteers engaging with children" },
+  { src: imag15, alt: "Community celebrations" }, 
+  { src: imag16, alt: "Children learning and growing" },  
+  { src: imag17, alt: "Feeding program in action" },
+  { src: imag18, alt: "Creative workshops" },
+  { src: imag19, alt: "Community support and care" },
+  { src: imag20, alt: "Children's smiles and joy" },
+  { src: imag21, alt: "Volunteers making a difference" },
+  { src: imag22, alt: "Safe spaces for children" },
+  { src: imag23, alt: "Educational opportunities" },
+  { src: imag24, alt: "Community empowerment" },
+  { src: imag25, alt: "Children's laughter and happiness" },
+  { src: imag26, alt: "Volunteers' dedication and love" },
+  { src: imag27, alt: "Supportive community environment" },
+  { src: imag28, alt: "Children thriving in safe spaces" },
+  { src: imag29, alt: "Educational programs in action" },
+  { src: imag30,alt: "Community coming together" },
+  { src: imag31, alt: "Children's creativity and expression" },
+  { src: imag32, alt: "Volunteers' impact on lives" },
+  { src: imag33, alt: "Safe and nurturing environments" },
+  { src: imag34, alt: "Educational growth and development" },
+  { src: imag35, alt: "Community resilience and strength" },
+  { src: imag37, alt: "Volunteers' compassion and care" },
+  { src: imag38, alt: "Supportive community networks" },
+  { src: imag39, alt: "Children's joy and hope" },
+  { src: imag40, alt: "Educational opportunities for all" },
+  { src: imag41, alt: "Community solidarity and unity" },
+  { src: imag42, alt: "Children's growth and potential" },
+  { src: imag43, alt: "Volunteers' commitment to change" },
+  { src: imag44, alt: "Safe spaces fostering development" },
+  { src: imag45, alt: "Educational programs empowering youth" },
+  { src: imag46, alt: "Community support and collaboration" },
+  { src: imag47, alt: "Children's resilience and strength" },
+  { src: imag49, alt: "Supportive community relationships"  },
+  { src: imag50, alt: "Children's happiness and well-being" },
+  { src: imag51, alt: "Educational opportunities changing lives" },
+  { src: imag52, alt: "Community empowerment and growth" },
+  { src: imag53, alt: "Children's smiles and bright futures" },
+  { src: imag54, alt: "Volunteers' impact on the community" },  
 ];
 
 const GalleryImage = ({ src, alt, index, onClick }: { src: string; alt: string; index: number; onClick: () => void }) => {

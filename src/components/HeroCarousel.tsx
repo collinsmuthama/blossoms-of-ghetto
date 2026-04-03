@@ -2,15 +2,15 @@ import { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { ChevronLeft, ChevronRight, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import hero1 from "@/assets/hero-1.jpg";
-import hero2 from "@/assets/hero-2.jpg";
-import hero3 from "@/assets/hero-3.jpg";
-import hero4 from "@/assets/hero-4.jpg";
+import hero1 from "@/assets/images/g1/school.jpeg";
+import hero2 from "@/assets/images/g1/hero2.jpeg";
+import hero8    from "@/assets/images/g1/hero8.jpeg";
+import hero4 from "@/assets/images/g1/hero3.jpeg";
 
 const slides = [
   { image: hero1, title: "Restoring Hope in Mathare", subtitle: "Empowering children through love, food, and education" },
   { image: hero2, title: "Feeding Communities", subtitle: "No child should go to bed hungry" },
-  { image: hero3, title: "Nurturing Creativity", subtitle: "Arts, mentorship, and safe spaces for every child" },
+  { image: hero8, title: "Environmental Conservation", subtitle: "Protect today, preserve tomorrow 🌱" },
   { image: hero4, title: "Community Outreach", subtitle: "Reaching those who need it most" },
 ];
 
