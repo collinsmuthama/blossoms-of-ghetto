@@ -111,19 +111,72 @@ const Donate = () => {
           <div className="mt-16">
             <SectionHeading title="How to Donate" subtitle="Choose the method that works best for you" />
             <div className="grid md:grid-cols-2 gap-6">
-              {[
-                { icon: Smartphone, title: "M-Pesa", desc: "Pay instantly via M-Pesa STK push. Select amount and tap Pay or use the this details PAYBILL NO. : 522533 ACCOUNT NO. : 7877206." },
-                { icon: Heart, title: "GoFundMe", desc: "Donate through our GoFundMe campaign page with card or PayPal." },
-                { icon: CreditCard, title: "Bank Transfer", desc: `BANK : Kenya Commercial Bank (KCB) ACCOUNT NAME : Blossoms of Ghetto ACCOUNT NO. : 1330069609 SWIFT CODE : KCBLKENX` },
-                { icon: Building, title: "In-Kind Donations", desc: "Food, books, supplies — we welcome all support." },
-              ].map((m) => (
-                <div key={m.title} className="bg-card rounded-xl p-8 border text-center">
-                  <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                    <m.icon className="w-7 h-7 text-primary" />
-                  </div>
-                  <h3 className="font-display font-semibold text-lg mb-2">{m.title}</h3>
-                  <p className="text-muted-foreground text-sm">{m.desc}</p>
+              {/* M-Pesa Card */}
+              <div className="bg-card rounded-xl p-8 border text-center">
+                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                  <Smartphone className="w-7 h-7 text-primary" />
                 </div>
+                <h3 className="font-display font-semibold text-lg mb-3">M-Pesa</h3>
+                <p className="text-muted-foreground text-sm mb-4">Pay instantly via M-Pesa STK push or use the details below:</p>
+                <div className="bg-muted/50 rounded-lg p-4 text-left space-y-2">
+                  <div className="flex justify-between items-center">
+                    <span className="text-muted-foreground text-sm">Paybill No.</span>
+                    <span className="font-bold text-foreground text-lg">522533</span>
+                  </div>
+                  <div className="border-t border-border" />
+                  <div className="flex justify-between items-center">
+                    <span className="text-muted-foreground text-sm">Account No.</span>
+                    <span className="font-bold text-foreground text-lg">7877206</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* GoFundMe Card */}
+              <div className="bg-card rounded-xl p-8 border text-center">
+                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                  <Heart className="w-7 h-7 text-primary" />
+                </div>
+                <h3 className="font-display font-semibold text-lg mb-3">GoFundMe</h3>
+                <p className="text-muted-foreground text-sm">Donate through our GoFundMe campaign page with card or PayPal.</p>
+              </div>
+
+              {/* Bank Transfer Card */}
+              <div className="bg-card rounded-xl p-8 border text-center">
+                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                  <CreditCard className="w-7 h-7 text-primary" />
+                </div>
+                <h3 className="font-display font-semibold text-lg mb-3">Bank Transfer</h3>
+                <div className="bg-muted/50 rounded-lg p-4 text-left space-y-2">
+                  <div className="flex justify-between items-center">
+                    <span className="text-muted-foreground text-sm">Bank</span>
+                    <span className="font-semibold text-foreground">Kenya Commercial Bank (KCB)</span>
+                  </div>
+                  <div className="border-t border-border" />
+                  <div className="flex justify-between items-center">
+                    <span className="text-muted-foreground text-sm">Account Name</span>
+                    <span className="font-semibold text-foreground">Blossoms of Ghetto</span>
+                  </div>
+                  <div className="border-t border-border" />
+                  <div className="flex justify-between items-center">
+                    <span className="text-muted-foreground text-sm">Account No.</span>
+                    <span className="font-bold text-foreground text-lg">1330069609</span>
+                  </div>
+                  <div className="border-t border-border" />
+                  <div className="flex justify-between items-center">
+                    <span className="text-muted-foreground text-sm">Swift Code</span>
+                    <span className="font-bold text-foreground">KCBLKENX</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* In-Kind Card */}
+              <div className="bg-card rounded-xl p-8 border text-center">
+                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                  <Building className="w-7 h-7 text-primary" />
+                </div>
+                <h3 className="font-display font-semibold text-lg mb-3">In-Kind Donations</h3>
+                <p className="text-muted-foreground text-sm">Food, books, supplies — we welcome all support.</p>
+              </div>
               ))}
             </div>
           </div>
