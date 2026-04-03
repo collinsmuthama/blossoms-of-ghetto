@@ -131,15 +131,6 @@ const Donate = () => {
                 </div>
               </div>
 
-              {/* GoFundMe Card */}
-              <div className="bg-card rounded-xl p-8 border text-center">
-                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <Heart className="w-7 h-7 text-primary" />
-                </div>
-                <h3 className="font-display font-semibold text-lg mb-3">GoFundMe</h3>
-                <p className="text-muted-foreground text-sm">Donate through our GoFundMe campaign page with card or PayPal.</p>
-              </div>
-
               {/* Bank Transfer Card */}
               <div className="bg-card rounded-xl p-8 border text-center">
                 <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
@@ -167,6 +158,15 @@ const Donate = () => {
                     <span className="font-bold text-foreground text-lg block">KCBLKENX</span>
                   </div>
                 </div>
+              </div>
+
+              {/* GoFundMe Card */}
+              <div className="bg-card rounded-xl p-8 border text-center">
+                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                  <Heart className="w-7 h-7 text-primary" />
+                </div>
+                <h3 className="font-display font-semibold text-lg mb-3">GoFundMe</h3>
+                <p className="text-muted-foreground text-sm">Donate through our GoFundMe campaign page with card or PayPal.</p>
               </div>
 
               {/* In-Kind Card */}
