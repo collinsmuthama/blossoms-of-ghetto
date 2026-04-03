@@ -177,7 +177,7 @@ const Donate = () => {
                 <h3 className="font-display font-semibold text-lg mb-3">In-Kind Donations</h3>
                 <p className="text-muted-foreground text-sm">Food, books, supplies — we welcome all support.</p>
               </div>
-              ))}
+            
             </div>
           </div>
         </div>
