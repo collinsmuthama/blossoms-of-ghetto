@@ -61,6 +61,9 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        "logo-blue": {
+          DEFAULT: "hsl(205 70% 45%)",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
