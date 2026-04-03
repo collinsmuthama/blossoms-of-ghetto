@@ -25,7 +25,7 @@ const Navbar = () => {
             className="w-10 h-10 object-contain drop-shadow-sm"
             style={{ imageRendering: 'auto', filter: 'drop-shadow(0 1px 2px rgba(0,0,0,0.1))' }}
           />
-          <span className="font-display text-xl font-bold text-primary">
+          <span className="font-display text-xl font-bold" style={{ color: 'hsl(205, 70%, 45%)' }}>
             Blossoms of Ghetto
           </span>
         </Link>
