@@ -30,34 +30,47 @@ const HeroCarousel = () => {
       {slides.map((slide, i) => (
         <div
           key={i}
-          className="absolute inset-0 transition-opacity duration-1000"
-          style={{ opacity: i === current ? 1 : 0 }}
+          className="absolute inset-0 transition-all duration-1000 ease-in-out"
+          style={{
+            opacity: i === current ? 1 : 0,
+            transform: i === current ? 'scale(1)' : 'scale(1.05)',
+          }}
         >
           <img
             src={slide.image}
             alt={slide.title}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center"
             width={1920}
             height={1080}
+            loading={i === 0 ? "eager" : "lazy"}
+            style={{ imageRendering: 'auto', filter: 'brightness(0.95) contrast(1.05) saturate(1.1)' }}
           />
-          <div className="absolute inset-0 hero-overlay" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10" />
         </div>
       ))}
 
       <div className="relative z-10 h-full flex items-center">
         <div className="container">
-          <div className="max-w-2xl animate-fade-in">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-primary-foreground mb-6 leading-tight">
+          <div className="max-w-2xl">
+            <h1
+              key={`title-${current}`}
+              className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-6 leading-tight"
+              style={{ animation: 'fade-in 0.8s ease-out forwards' }}
+            >
               {slides[current].title}
             </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 font-body">
+            <p
+              key={`sub-${current}`}
+              className="text-lg md:text-xl text-white/85 mb-8 font-body"
+              style={{ animation: 'fade-in 0.8s 0.2s ease-out forwards', opacity: 0 }}
+            >
               {slides[current].subtitle}
             </p>
             <div className="flex flex-wrap gap-4">
               <Button asChild size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90 gap-2 text-base px-8">
                 <Link to="/donate"><Heart className="w-5 h-5" /> Donate Now</Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground/10 text-base px-8">
+              <Button asChild size="lg" variant="outline" className="border-white/40 text-white hover:bg-white/10 text-base px-8">
                 <Link to="/about">Learn More</Link>
               </Button>
             </div>
@@ -66,11 +79,11 @@ const HeroCarousel = () => {
       </div>
 
       {/* Nav arrows */}
-      <button onClick={prev} className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-primary-foreground/20 hover:bg-primary-foreground/40 backdrop-blur-sm rounded-full p-2 text-primary-foreground transition-colors">
-        <ChevronLeft className="w-6 h-6" />
+      <button onClick={prev} className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/15 hover:bg-white/30 backdrop-blur-md rounded-full p-3 text-white transition-all hover:scale-110">
+        <ChevronLeft className="w-5 h-5" />
       </button>
-      <button onClick={next} className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-primary-foreground/20 hover:bg-primary-foreground/40 backdrop-blur-sm rounded-full p-2 text-primary-foreground transition-colors">
-        <ChevronRight className="w-6 h-6" />
+      <button onClick={next} className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/15 hover:bg-white/30 backdrop-blur-md rounded-full p-3 text-white transition-all hover:scale-110">
+        <ChevronRight className="w-5 h-5" />
       </button>
 
       {/* Dots */}
@@ -79,7 +92,7 @@ const HeroCarousel = () => {
           <button
             key={i}
             onClick={() => setCurrent(i)}
-            className={`w-3 h-3 rounded-full transition-all ${i === current ? "bg-secondary w-8" : "bg-primary-foreground/40"}`}
+            className={`h-2 rounded-full transition-all duration-300 ${i === current ? "bg-white w-8" : "bg-white/40 w-2 hover:bg-white/60"}`}
           />
         ))}
       </div>
