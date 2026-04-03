@@ -110,11 +110,11 @@ const Donate = () => {
           {/* Payment methods info */}
           <div className="mt-16">
             <SectionHeading title="How to Donate" subtitle="Choose the method that works best for you" />
-            <div className="grid md:grid-cols-4 gap-6">
+            <div className="grid md:grid-cols-2 gap-6">
               {[
-                { icon: Smartphone, title: "M-Pesa", desc: "Pay instantly via M-Pesa STK push. Select amount and tap Pay." },
+                { icon: Smartphone, title: "M-Pesa", desc: "Pay instantly via M-Pesa STK push. Select amount and tap Pay or use the this details PAYBILL NO. : 522533 ACCOUNT NO. : 7877206." },
                 { icon: Heart, title: "GoFundMe", desc: "Donate through our GoFundMe campaign page with card or PayPal." },
-                { icon: CreditCard, title: "Bank Transfer", desc: "Direct bank transfer. Reach out for account details." },
+                { icon: CreditCard, title: "Bank Transfer", desc: `BANK : Kenya Commercial Bank (KCB) ACCOUNT NAME : Blossoms of Ghetto ACCOUNT NO. : 1330069609 SWIFT CODE : KCBLKENX` },
                 { icon: Building, title: "In-Kind Donations", desc: "Food, books, supplies — we welcome all support." },
               ].map((m) => (
                 <div key={m.title} className="bg-card rounded-xl p-8 border text-center">

@@ -56,7 +56,7 @@ const Footer = () => (
           <div className="flex flex-col gap-3 text-sm text-primary-foreground/80">
             <div className="flex items-center gap-2"><MapPin className="w-4 h-4 shrink-0" /> Mathare, Nairobi, Kenya</div>
             <div className="flex items-center gap-2"><Mail className="w-4 h-4 shrink-0" /> info@blossomsofghetto.org</div>
-            <div className="flex items-center gap-2"><Phone className="w-4 h-4 shrink-0" /> +254 700 000 000</div>
+            <div className="flex items-center gap-2"><Phone className="w-4 h-4 shrink-0" /> +254 0705 287 804</div>
           </div>
         </div>
         <div>
