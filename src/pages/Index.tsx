@@ -183,7 +183,7 @@ const Index = () => (
               <div className="aspect-video rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <iframe
                   className="w-full h-full"
-                  src={video.embedUrl || `https://www.youtube.com/embed/${video.id}`}
+                  src={`https://www.youtube.com/embed/${video.id}`}
                   title={video.title}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
