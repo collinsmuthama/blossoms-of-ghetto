@@ -177,7 +177,7 @@ const Index = () => (
           {[
             { id: "wsXcHNiP8hA", title: "Our Impact Story" },
             { id: "okFTEynO_e0", title: "Life in the Community" },
-            { id: "channel", title: "Blossoms of Ghetto Channel", embedUrl: "https://www.youtube.com/embed?listType=user_uploads&list=blossomsofghetto" },
+            { id: "fj2aLvTvaf0", title: "Blossoms of Ghetto Shorts" },
           ].map((video, i) => (
             <ScrollReveal key={video.id} delay={i * 150} direction="scale">
               <div className="aspect-video rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
