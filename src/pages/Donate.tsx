@@ -54,14 +54,13 @@ const Donate = () => {
         });
 
         console.log("STK Push response:", res);
+    } catch (error) {
+      console.error("STK Push error:", error);
+      toast({ title: "M-Pesa request failed. Please try again.", variant: "destructive" });
+    } finally {
+      setMpesaLoading(false);
     }
-    //setMpesaLoading(true);
-    // Simulate STK push
-  //   setTimeout(() => {
-  //     setMpesaLoading(false);
-  //     setMpesaSent(true);
-  //   }, 2000);
-   };
+  };
 
   return (
     <main className="pt-20">
