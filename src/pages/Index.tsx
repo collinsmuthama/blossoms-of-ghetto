@@ -173,19 +173,37 @@ const Index = () => (
             </div>
           </ScrollReveal>
         </div>
-        <ScrollReveal delay={200}>
-          <div className="mt-12 max-w-2xl mx-auto">
-            <div className="aspect-video rounded-xl overflow-hidden shadow-lg">
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                title="Blossoms of Ghetto Story"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                loading="lazy"
-              />
-            </div>
-            <p className="text-center text-sm text-muted-foreground mt-4">Watch our story and see the impact firsthand</p>
+        <div className="grid md:grid-cols-3 gap-8 mt-12">
+          {[
+            { id: "wsXcHNiP8hA", title: "Our Impact Story" },
+            { id: "okFTEynO_e0", title: "Life in the Community" },
+            { id: "channel", title: "Blossoms of Ghetto Channel", embedUrl: "https://www.youtube.com/embed?listType=user_uploads&list=blossomsofghetto" },
+          ].map((video, i) => (
+            <ScrollReveal key={video.id} delay={i * 150} direction="scale">
+              <div className="aspect-video rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <iframe
+                  className="w-full h-full"
+                  src={video.embedUrl || `https://www.youtube.com/embed/${video.id}`}
+                  title={video.title}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  loading="lazy"
+                />
+              </div>
+              <p className="text-center text-sm text-muted-foreground mt-3 font-medium">{video.title}</p>
+            </ScrollReveal>
+          ))}
+        </div>
+        <ScrollReveal delay={500}>
+          <div className="text-center mt-8">
+            <a
+              href="https://youtube.com/@blossomsofghetto"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-primary font-medium hover:underline transition-colors duration-300"
+            >
+              Visit our YouTube Channel <ArrowRight className="w-4 h-4" />
+            </a>
           </div>
         </ScrollReveal>
       </div>
