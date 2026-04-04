@@ -36,7 +36,7 @@ const Donate = () => {
     setMpesaPhone("");
   };
 
-  const handleMpesaSend = () => {
+  const handleMpesaSend = async () => {
     if (!mpesaPhone || mpesaPhone.length < 10) {
       toast({ title: "Please enter a valid phone number", variant: "destructive" });
       return;
