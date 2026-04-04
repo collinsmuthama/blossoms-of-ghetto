@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import SectionHeading from "@/components/SectionHeading";
 import { useToast } from "@/hooks/use-toast";
+import api from "@/lib/api";
 import {
   Dialog,
   DialogContent,
@@ -40,13 +41,27 @@ const Donate = () => {
       toast({ title: "Please enter a valid phone number", variant: "destructive" });
       return;
     }
-    setMpesaLoading(true);
+    try {
+      setMpesaLoading(true);
+      //format phone number to international format if it starts with 0
+      const formattedPhone = mpesaPhone.startsWith("0")
+        ? "+254" + mpesaPhone.slice(1)
+        : mpesaPhone;
+
+        const res = await api.post("/mpesa/stkpush", {
+            phone: formattedPhone,
+            amount: donationAmount,
+        });
+
+        console.log("STK Push response:", res);
+    }
+    //setMpesaLoading(true);
     // Simulate STK push
-    setTimeout(() => {
-      setMpesaLoading(false);
-      setMpesaSent(true);
-    }, 2000);
-  };
+  //   setTimeout(() => {
+  //     setMpesaLoading(false);
+  //     setMpesaSent(true);
+  //   }, 2000);
+   };
 
   return (
     <main className="pt-20">
