@@ -44,21 +44,47 @@ const Donate = () => {
     try {
       setMpesaLoading(true);
       //format phone number to international format if it starts with 0
-      const formattedPhone = mpesaPhone.startsWith("0")
-        ? "+254" + mpesaPhone.slice(1)
-        : mpesaPhone;
+      const formattedPhone = (mpesaPhone)=>{
+        if(mpesaPhone.startsWith("0")){
+          return "254" + mpesaPhone.slice(1);
+        }
+        if(mpesaPhone.startsWith("+")){ 
+          return mpesaPhone.replace("+", "");
+        }
+
+        return mpesaPhone;
+
+      }
+        
 
         const res = await api.post("/mpesa/stkpush", {
-            phone: formattedPhone,
+            phoneNumber: formattedPhone(mpesaPhone),
             amount: donationAmount,
         });
 
-        console.log("STK Push response:", res);
+        console.log("STK Push response:", res.data.ResponseCode, res.data.ResponseDescription);
+
+        // Assuming the API returns a success status for the STK push
+        if (res.data.ResponseCode == 0) {
+          console.log("STK Push successful:", res.data);
+            setMpesaSent(true);
+            toast({ 
+              title: "STK Push sent! Check your phone to complete the payment.",
+              className: "bg-green-600 text-white",
+            });
+            setMpesaOpen(false);
+        } else {
+            throw new Error("Failed to send STK push");
+        }
     } catch (error) {
-      console.error("STK Push error:", error);
-      toast({ title: "M-Pesa request failed. Please try again.", variant: "destructive" });
+        console.error("STK Push error:", error);
+        toast({ 
+          title: "M-Pesa request failed. Please try again.", 
+          description: error instanceof Error ? error.message : "An unexpected error occurred.",
+          variant: "destructive" ,
+        });
     } finally {
-      setMpesaLoading(false);
+        setMpesaLoading(false);
     }
   };
 
