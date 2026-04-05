@@ -139,7 +139,7 @@ const Donate = () => {
                 size="lg"
                 className="flex-1 bg-secondary text-secondary-foreground hover:bg-secondary/90 gap-2 text-lg py-6"
               >
-                <a href="https://gofundme.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.gofundme.com/f/support-blossoms-of-ghetto-uplifting-slum-children-in-kenya?attribution_id=sl:4871ad32-cd17-49a7-accf-aa9a065c26a8&lang=en_US&utm_campaign=man_ss_icons&utm_medium=customer&utm_source=copy_link" target="_blank" rel="noopener noreferrer">
                   <Heart className="w-5 h-5" /> GoFundMe
                   <ExternalLink className="w-4 h-4" />
                 </a>
