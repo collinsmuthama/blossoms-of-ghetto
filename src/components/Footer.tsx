@@ -1,12 +1,20 @@
 import { Link } from "react-router-dom";
-import { Heart, Mail, MapPin, Phone, Facebook, Instagram, Twitter, Youtube } from "lucide-react";
+import { Heart, Mail, MapPin, Phone, Facebook, Instagram, Twitter, Youtube, Linkedin } from "lucide-react";
 import logo from "@/assets/logos/logo.png";
 
+const TikTokIcon = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+    <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.75a8.18 8.18 0 004.76 1.52V6.84a4.84 4.84 0 01-1-.15z" />
+  </svg>
+);
+
 const socialLinks = [
-  { icon: Facebook, href: "https://facebook.com", label: "Facebook" },
-  { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
-  { icon: Twitter, href: "https://twitter.com", label: "Twitter / X" },
-  { icon: Youtube, href: "https://youtube.com", label: "YouTube" },
+  { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61555030305092", label: "Facebook" },
+  { icon: Instagram, href: "https://www.instagram.com/blossomsofghetto_254?igsh=MXBocnd1czJpYXc0dA==", label: "Instagram" },
+  { icon: Twitter, href: "https://x.com/BlossomsG26955", label: "Twitter / X" },
+  { icon: Youtube, href: "https://youtube.com/@blossomsofghetto", label: "YouTube" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/blossoms-of-ghetto-96367b305", label: "LinkedIn" },
+  { icon: TikTokIcon, href: "https://vm.tiktok.com/ZS98qdAcwVWK9-q8alb/", label: "TikTok" },
 ];
 
 const Footer = () => (
