@@ -38,10 +38,13 @@ const activities = [
 ];
 
 const stats = [
-  { value: "500+", label: "Children Supported" },
-  { value: "1,000+", label: "Meals Served Monthly" },
-  { value: "50+", label: "Volunteers" },
-  { value: "June 2024", label: "Founded" },
+  { value: "500–600", label: "Children Supported" },
+  { value: "15,000+", label: "Meals Served" },
+  { value: "150–200", label: "Kids Reached Per Event" },
+  { value: "2 Days/Week", label: "Street Kid Feeding Program" },
+  { value: "3", label: "Full-Time Staff" },
+  { value: "10–15", label: "Active Volunteers" },
+  { value: "3 Slums", label: "Mathare, Dandora & Surroundings" },
 ];
 
 const partners = [
@@ -136,7 +139,7 @@ const Index = () => (
     {/* Stats */}
     <section className="py-16 bg-secondary">
       <div className="container">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
           {stats.map((s, i) => (
             <ScrollReveal key={s.label} delay={i * 100}>
               <div className="text-center">
