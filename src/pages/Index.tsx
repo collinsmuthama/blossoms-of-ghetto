@@ -38,10 +38,13 @@ const activities = [
 ];
 
 const stats = [
-  { value: "500+", label: "Children Supported" },
-  { value: "1,000+", label: "Meals Served Monthly" },
-  { value: "50+", label: "Volunteers" },
-  { value: "June 2024", label: "Founded" },
+  { value: "500–600", label: "Children Supported" },
+  { value: "15,000+", label: "Meals Served" },
+  { value: "150–200", label: "Kids Reached Per Event" },
+  { value: "2 Days/Week", label: "Street Kid Feeding Program" },
+  { value: "3", label: "Full-Time Staff" },
+  { value: "10–15", label: "Active Volunteers" },
+  { value: "3 Slums", label: "Mathare, Dandora & Surroundings" },
 ];
 
 const partners = [
