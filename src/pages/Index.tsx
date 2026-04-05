@@ -139,7 +139,7 @@ const Index = () => (
     {/* Stats */}
     <section className="py-16 bg-secondary">
       <div className="container">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
           {stats.map((s, i) => (
             <ScrollReveal key={s.label} delay={i * 100}>
               <div className="text-center">
