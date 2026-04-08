@@ -6,6 +6,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
+import PhotoDisclaimer from "@/components/PhotoDisclaimer";
+import WhatsAppChat from "@/components/WhatsAppChat";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Gallery from "./pages/Gallery";
@@ -39,6 +41,8 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Navbar />
+        <PhotoDisclaimer />
+        <WhatsAppChat />
         <AnimatedRoutes />
         <Footer />
       </BrowserRouter>

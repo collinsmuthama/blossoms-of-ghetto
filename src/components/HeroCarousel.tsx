@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { ChevronLeft, ChevronRight, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import PhotoWatermark from "@/components/PhotoWatermark";
 import hero1 from "@/assets/images/g1/school.jpeg";
 import hero2 from "@/assets/images/g1/hero2.jpeg";
 import hero8    from "@/assets/images/g1/hero8.jpeg";
@@ -46,6 +47,10 @@ const HeroCarousel = () => {
             style={{ imageRendering: 'auto', filter: 'brightness(0.95) contrast(1.05) saturate(1.1)' }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10" />
+          <PhotoWatermark
+            className="left-1/2 top-[90%] bottom-auto z-20 -translate-x-1/2 -translate-y-1/2"
+            sizeClassName="h-24 w-24 opacity-100"
+          />
         </div>
       ))}
 

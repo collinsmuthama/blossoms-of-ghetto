@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import HeroCarousel from "@/components/HeroCarousel";
 import SectionHeading from "@/components/SectionHeading";
 import ScrollReveal from "@/components/ScrollReveal";
+import PhotoWatermark from "@/components/PhotoWatermark";
 import whoweare from "@/assets/images/g1/whoweare.jpeg";
 import Alive from "@/assets/logos/Alive.jpg";
 import Istreet from "@/assets/logos/Istreet.jpg";

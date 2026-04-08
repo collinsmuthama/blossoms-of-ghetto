@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import { Skeleton } from "@/components/ui/skeleton";
 
 const PageSkeleton = () => (
-  <div className="pt-20 min-h-screen animate-pulse">
+  <div className="pt-32 min-h-screen animate-pulse">
     {/* Hero skeleton */}
     <div className="py-20 md:py-28 bg-muted">
       <div className="container flex flex-col items-center gap-4">

@@ -1,5 +1,6 @@
 import { Heart, Eye, Target, Users } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
+import PhotoWatermark from "@/components/PhotoWatermark";
 import aboutUs from "@/assets/images/g1/about.jpeg";
 import us from "@/assets/images/g1/us.jpeg";
 
@@ -11,10 +12,14 @@ const values = [
 ];
 
 const About = () => (
-  <main className="pt-20">
+  <main className="pt-32">
     {/* Hero */}
     <section className="relative py-20 md:py-32 overflow-hidden">
       <img src={aboutUs} alt="Blossoms of Ghetto children" className="absolute inset-0 w-full h-full object-cover" />
+      <PhotoWatermark
+        className="left-1/2 top-1/2 bottom-auto z-20 -translate-x-1/2 -translate-y-1/2"
+        sizeClassName="h-24 w-24 opacity-25"
+      />
       <div className="absolute inset-0 hero-overlay" />
       <div className="relative z-10 container text-center">
         <h1 className="text-4xl md:text-6xl font-display font-bold text-primary-foreground mb-4">About Us</h1>
@@ -33,7 +38,10 @@ const About = () => (
             <p>Blossoms of Ghetto is a community-based organization founded in June 2024 and based in Mathare, Nairobi, Kenya. It was started with a simple but powerful vision: to create a safe, supportive, and empowering space for children and families living in vulnerable conditions.</p>
             <p>What makes us unique is that we are built on lived experience. Our founder, Peter Kimani, grew up facing the realities of street life and understands firsthand the challenges many children in Mathare go through—hunger, lack of safe spaces, limited access to education, and exposure to difficult environments.</p>
           </div>
-          <img src={us} alt="Community outreach" className="rounded-2xl shadow-xl" loading="lazy" />
+          <div className="relative">
+            <img src={us} alt="Community outreach" className="rounded-2xl shadow-xl" loading="lazy" />
+            <PhotoWatermark className="bottom-3 left-3" sizeClassName="h-8 w-8" />
+          </div>
         </div>
       </div>
     </section>

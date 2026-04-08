@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/logos/logo.png";
+import logo from "@/assets/logos/watermark.png";
 
 const navLinks = [
   { label: "Home", path: "/" },
@@ -36,7 +36,7 @@ const Navbar = () => {
           <img
             src={logo}
             alt="Blossoms of Ghetto Logo"
-            className="w-10 h-10 object-contain drop-shadow-sm transition-transform duration-300 group-hover:scale-110"
+            className="w-14 h-14 object-contain drop-shadow-sm transition-transform duration-300 group-hover:scale-110"
             style={{ imageRendering: 'auto', filter: 'drop-shadow(0 1px 2px rgba(0,0,0,0.1))' }}
           />
           <span

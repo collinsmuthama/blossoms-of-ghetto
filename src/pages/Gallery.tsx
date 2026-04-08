@@ -2,6 +2,7 @@ import { useState, useCallback } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 import ScrollReveal from "@/components/ScrollReveal";
+import PhotoWatermark from "@/components/PhotoWatermark";
 import imag1 from "@/assets/images/g1/11.jpeg";
 import imag2 from "@/assets/images/g1/21.jpeg";
 import imag3 from "@/assets/images/g1/31.jpeg";
@@ -128,6 +129,7 @@ const GalleryImage = ({ src, alt, index, onClick }: { src: string; alt: string; 
         loading="lazy"
         onLoad={() => setLoaded(true)}
       />
+      <PhotoWatermark />
       {/* Hover overlay */}
       <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/30 transition-colors duration-300 flex items-end justify-start p-4">
         <span className="text-white text-sm font-medium opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
@@ -150,7 +152,7 @@ const Gallery = () => {
   }, []);
 
   return (
-    <main className="pt-20">
+    <main className="pt-32">
       <section className="py-20 md:py-28 bg-primary text-primary-foreground text-center">
         <div className="container">
           <ScrollReveal direction="scale">
@@ -192,12 +194,17 @@ const Gallery = () => {
           >
             <ChevronLeft className="w-10 h-10" />
           </button>
-          <img
-            src={images[selected].src}
-            alt={images[selected].alt}
-            className="max-w-full max-h-[85vh] rounded-xl shadow-2xl animate-in zoom-in-95 duration-200"
+          <div
+            className="relative"
             onClick={(e) => e.stopPropagation()}
-          />
+          >
+            <img
+              src={images[selected].src}
+              alt={images[selected].alt}
+              className="max-w-full max-h-[85vh] rounded-xl shadow-2xl animate-in zoom-in-95 duration-200"
+            />
+            <PhotoWatermark sizeClassName="h-9 w-9 opacity-80" className="bottom-3 left-3" />
+          </div>
           <button
             className="absolute right-4 md:right-8 text-white/60 hover:text-white transition-colors"
             onClick={(e) => { e.stopPropagation(); navigate(1); }}
