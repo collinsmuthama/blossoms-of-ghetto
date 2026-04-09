@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Heart, Mail, MapPin, Phone, Facebook, Instagram, Twitter, Youtube, Linkedin } from "lucide-react";
-import logo from "@/assets/logos/logo.png";
+import logo from "@/assets/logos/watermark.png";
 
 const TikTokIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor">
@@ -22,10 +22,6 @@ const Footer = () => (
     <div className="container py-16">
       <div className="grid md:grid-cols-4 gap-12">
         <div>
-          <div className="flex items-center gap-2 mb-4">
-            <img src={logo} alt="Blossoms of Ghetto Logo" className="w-12 h-12 object-contain drop-shadow-md" />
-            <span className="font-display text-xl font-bold">Blossoms of Ghetto</span>
-          </div>
           <p className="text-primary-foreground/80 text-sm leading-relaxed mb-5">
             Restoring hope, dignity, and opportunity for children and families in Mathare, Nairobi.
           </p>

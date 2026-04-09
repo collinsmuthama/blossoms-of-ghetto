@@ -15,6 +15,7 @@ import The from "@/assets/logos/The.jpg";
 import cheerfull from "@/assets/logos/cheerfull.jpg";
 import kids from "@/assets/logos/kids.jpg";
 import hero from "@/assets/logos/hero.jpg";
+import logo from "@/assets/logos/watermark.png";
 
 const programs = [
   { icon: Utensils, title: "Feeding Program", desc: "Regular meals for children and vulnerable families facing food insecurity." },
@@ -85,9 +86,12 @@ const Index = () => (
           <ScrollReveal direction="left">
             <div className="relative">
               <img src={whoweare} alt="Children at Blossoms of Ghetto" className="rounded-2xl shadow-xl" width={800} height={533} loading="lazy" />
-              <div className="absolute -bottom-6 -left-6 bg-secondary text-secondary-foreground rounded-xl p-6 shadow-lg hidden md:block">
-                <p className="font-display text-2xl font-bold">Since 2024</p>
-                <p className="text-sm">Serving Mathare Community</p>
+              <div className="absolute -bottom-6 -left-6 hidden md:flex items-end gap-4">
+                <div className="bg-secondary text-secondary-foreground rounded-xl p-6 shadow-lg">
+                  <p className="font-display text-2xl font-bold">Since 2024</p>
+                  <p className="text-sm">Serving Mathare Community</p>
+                </div>
+                <PhotoWatermark className="static" sizeClassName="h-14 w-14 opacity-60" />
               </div>
             </div>
           </ScrollReveal>
@@ -241,6 +245,14 @@ const Index = () => (
 
     {/* CTA */}
     <section className="py-20 md:py-28 bg-primary text-primary-foreground text-center">
+    <div className="flex justify-center items-center">
+      <div className="flex justify-center mb-8">
+        <img
+          src={logo}
+          alt="Blossoms of Ghetto Logo"
+          className="w-40 h-40 object-contain drop-shadow-md"
+        />
+      </div>
       <div className="container max-w-2xl">
         <ScrollReveal direction="scale">
           <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">Change a Life Today</h2>
@@ -251,6 +263,7 @@ const Index = () => (
             <Link to="/donate"><Heart className="w-5 h-5" /> Donate Now</Link>
           </Button>
         </ScrollReveal>
+      </div>
       </div>
     </section>
   </main>
