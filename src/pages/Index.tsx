@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Heart, Utensils, BookOpen, Users, HandHeart, ArrowRight, RefreshCw, ShieldCheck, HeartPulse, Briefcase, Megaphone, Handshake, Siren, Lightbulb, Home, Trophy, Tent, Goal } from "lucide-react";
+import { Heart, Utensils, BookOpen, Users, HandHeart, ArrowRight, RefreshCw, ShieldCheck, HeartPulse, Briefcase, Megaphone, Handshake, Siren, Lightbulb, Home, Trophy, Tent, Goal, GraduationCap, Sparkles, Shield, Target, Eye } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import HeroCarousel from "@/components/HeroCarousel";
 import SectionHeading from "@/components/SectionHeading";
