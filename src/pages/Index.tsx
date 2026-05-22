@@ -119,6 +119,86 @@ const Index = () => (
       </div>
     </section>
 
+    {/* Our Impact Approach */}
+    <section className="relative py-20 md:py-28 bg-gradient-to-br from-secondary/20 via-background to-primary/10 overflow-hidden">
+      <div className="absolute inset-0 opacity-[0.04] pointer-events-none" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)", backgroundSize: "24px 24px" }} />
+      <div className="container relative">
+        <ScrollReveal>
+          <SectionHeading title="Our Impact Approach" subtitle="Rooted in lived experience. Built for lasting change in Mathare." />
+        </ScrollReveal>
+
+        <ScrollReveal delay={100}>
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <p className="text-muted-foreground leading-relaxed text-lg">
+              Blossoms of Ghetto is a community-based organization working in Mathare, Nairobi. Our approach is guided by the realities of informal settlements. Over time, we have learned that lasting change requires more than short-term support — it requires systems that strengthen <span className="text-primary font-semibold">education</span>, <span className="text-primary font-semibold">livelihoods</span>, and <span className="text-primary font-semibold">protection</span> within the community itself.
+            </p>
+          </div>
+        </ScrollReveal>
+
+        <div className="mb-16">
+          <ScrollReveal>
+            <h3 className="font-display text-2xl md:text-3xl font-bold text-center mb-10 text-foreground">Our Focus Areas</h3>
+          </ScrollReveal>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { icon: GraduationCap, title: "Education & Learning Recovery", desc: "Structured learning programs that improve literacy, numeracy, and school retention — so children don't just attend school, they progress with confidence." },
+              { icon: Sparkles, title: "Youth Skills & Livelihood Pathways", desc: "Practical skills, apprenticeships, mentorship, and starter support that link young people to real income opportunities and economic stability." },
+              { icon: Shield, title: "Child Protection & Girls' Empowerment", desc: "Safe spaces, mentorship, menstrual health support, life skills education, and community-based protection for vulnerable children and girls." },
+            ].map((f, i) => (
+              <ScrollReveal key={f.title} delay={i * 150} direction="scale">
+                <div className="relative h-full bg-card border-2 border-primary/10 rounded-2xl p-8 shadow-md hover:shadow-2xl hover:-translate-y-2 hover:border-primary/40 transition-all duration-300">
+                  <div className="absolute -top-5 left-8 w-12 h-12 rounded-xl bg-primary text-primary-foreground flex items-center justify-center shadow-lg">
+                    <f.icon className="w-6 h-6" />
+                  </div>
+                  <h4 className="font-display text-xl font-bold mt-4 mb-3 text-foreground">{f.title}</h4>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{f.desc}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <ScrollReveal direction="right">
+            <div className="h-full bg-card rounded-2xl p-8 shadow-md border-l-4 border-primary">
+              <div className="flex items-center gap-3 mb-5">
+                <Target className="w-7 h-7 text-primary" />
+                <h3 className="font-display text-2xl font-bold text-foreground">Our Approach</h3>
+              </div>
+              <ul className="space-y-3">
+                {[
+                  "Community involvement and ownership",
+                  "Consistency over one-time interventions",
+                  "Tracking of progress and outcomes",
+                  "Collaboration with schools, volunteers, and local stakeholders",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-muted-foreground">
+                    <span className="mt-2 w-2 h-2 rounded-full bg-secondary flex-shrink-0" />
+                    <span className="leading-relaxed">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal direction="left" delay={150}>
+            <div className="h-full bg-primary text-primary-foreground rounded-2xl p-8 shadow-xl relative overflow-hidden">
+              <div className="absolute -right-8 -bottom-8 w-40 h-40 rounded-full bg-secondary/20 blur-2xl" />
+              <div className="relative">
+                <div className="flex items-center gap-3 mb-5">
+                  <Eye className="w-7 h-7 text-secondary" />
+                  <h3 className="font-display text-2xl font-bold">Our Vision</h3>
+                </div>
+                <p className="text-primary-foreground/90 leading-relaxed text-lg italic">
+                  To build a Mathare where <span className="text-secondary font-semibold not-italic">children can learn</span>, <span className="text-secondary font-semibold not-italic">youth can earn</span>, and <span className="text-secondary font-semibold not-italic">families can live with dignity and stability.</span>
+                </p>
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
+      </div>
+    </section>
+
     {/* Activities */}
     <section className="py-20 md:py-28 section-pattern">
       <div className="container">
