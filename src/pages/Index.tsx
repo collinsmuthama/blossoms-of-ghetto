@@ -298,7 +298,7 @@ const Index = () => (
     </section>
 
     {/* Partners */}
-    <section className="py-20 md:py-28 bg-muted">
+    {/* <section className="py-20 md:py-28 bg-muted">
       <div className="container">
         <ScrollReveal>
           <SectionHeading title="Our Partners" subtitle="We are grateful for the support of friends and organizations" />
@@ -321,7 +321,7 @@ const Index = () => (
           ))}
         </div>
       </div>
-    </section>
+    </section> */}
 
     {/* CTA */}
     <section className="py-20 md:py-28 bg-primary text-primary-foreground text-center">
