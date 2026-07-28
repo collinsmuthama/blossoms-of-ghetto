@@ -53,7 +53,73 @@ import imag50 from "@/assets/images/g1/501.jpeg";
 import imag51 from "@/assets/images/g1/511.jpeg";
 import imag52 from "@/assets/images/g1/521.jpeg";
 import imag53 from "@/assets/images/g1/531.jpeg";
-import imag54 from "@/assets/images/g1/541.jpeg";   
+import imag54 from "@/assets/images/g1/541.jpeg";  
+import image56 from "@/assets/images/g4/19.jpeg";
+import image57 from "@/assets/images/g4/2.jpeg";
+import image58 from "@/assets/images/g4/3.jpeg";
+import image59 from "@/assets/images/g4/4.jpeg";
+import image60 from "@/assets/images/g4/5.jpeg";
+import image61 from "@/assets/images/g4/6.jpeg";
+import image62 from "@/assets/images/g4/7.jpeg";
+import image63 from "@/assets/images/g4/8.jpeg";
+import image64 from "@/assets/images/g4/9.jpeg";
+import image65 from "@/assets/images/g4/10.jpeg";
+import image66 from "@/assets/images/g4/11.jpeg";
+import image67 from "@/assets/images/g4/12.jpeg";
+import image68 from "@/assets/images/g4/13.jpeg";
+import image69 from "@/assets/images/g4/14.jpeg";
+import image70 from "@/assets/images/g4/15.jpeg";
+import image71 from "@/assets/images/g4/16.jpeg";
+import image72 from "@/assets/images/g4/17.jpeg";
+import image73 from "@/assets/images/g4/18.jpeg";
+import image74 from "@/assets/images/g4/19.jpeg";
+import image75 from "@/assets/images/g4/20.jpeg";
+import image76 from "@/assets/images/g4/21.jpeg";
+import image77 from "@/assets/images/g4/22.jpeg";
+import image78 from "@/assets/images/g4/23.jpeg";
+import image79 from "@/assets/images/g4/24.jpeg";
+import image80 from "@/assets/images/g4/25.jpeg";
+import image81 from "@/assets/images/g4/26.jpeg";
+import image82 from "@/assets/images/g4/27.jpeg";
+import image83 from "@/assets/images/g4/28.jpeg";
+import image84 from "@/assets/images/g4/29.jpeg";
+import image85 from "@/assets/images/g4/30.jpeg";
+import image86 from "@/assets/images/g4/31.jpeg";
+import image87 from "@/assets/images/g4/32.jpeg";
+import image88 from "@/assets/images/g4/33.jpeg";
+import image89 from "@/assets/images/g4/34.jpeg";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 const images = [
@@ -108,6 +174,39 @@ const images = [
   { src: imag52, alt: "Community empowerment and growth" },
   { src: imag53, alt: "Children's smiles and bright futures" },
   { src: imag54, alt: "Volunteers' impact on the community" },  
+  {src: image56 ,alt: "Fun day"},
+   {src: image57 ,alt: "Fun day"},
+    {src: image58 ,alt: "Fun day"},
+     {src: image59 ,alt: "Fun day"},
+      {src: image60 ,alt: "Fun day"},
+      {src: image61,alt:'Fun day'},
+      {src:image62, alt:'Fun day'},
+      {src:image63, alt:'Fun day'},
+      {src:image64, alt:'Fun day'},
+      {src:image65, alt:'Fun day'},
+      {src:image66, alt:'Fun day'},
+      {src:image67, alt:'Fun day'},
+      {src:image68, alt:'Fun day'},
+      {src:image69, alt:'Fun day'},
+      {src:image70, alt:'Fun day'},
+      {src:image71, alt:'Fun day'},
+      {src:image72, alt:'Fun day'},
+      {src:image73, alt:'Fun day'},
+        {src:image74, alt:'Fun day'},
+          {src:image75, alt:'Fun day'},
+            {src:image76, alt:'Fun day'},
+              {src:image77, alt:'Fun day'},
+                {src:image78, alt:'Fun day'},
+                  {src:image79, alt:'Fun day'},
+                    {src:image80, alt:'Fun day'},
+                      {src:image81, alt:'Fun day'},
+                        {src:image82, alt:'Fun day'},
+                          {src:image83, alt:'Fun day'},
+                            {src:image84, alt:'Fun day'},
+                              {src:image85, alt:'Fun day'},
+                                {src:image86, alt:'Fun day'},
+                                  {src:image87, alt:'Fun day'}
+
 ];
 
 const GalleryImage = ({ src, alt, index, onClick }: { src: string; alt: string; index: number; onClick: () => void }) => {
