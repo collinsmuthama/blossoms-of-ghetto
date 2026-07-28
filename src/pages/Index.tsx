@@ -311,7 +311,7 @@ const Index = () => (
               <div className="flex flex-col items-center text-center md:sticky md:top-28">
                 <div className="bg-white rounded-xl p-6 shadow-sm border mb-4 w-full">
                   <img
-                    src={smallStepsLogo.url}
+                    src={smallStepsLogo}
                     alt="Small Steps Project logo"
                     className="w-full max-w-[220px] mx-auto object-contain"
                     loading="lazy"
