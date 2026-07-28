@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Heart, Utensils, BookOpen, Users, HandHeart, ArrowRight, RefreshCw, ShieldCheck, HeartPulse, Briefcase, Megaphone, Handshake, Siren, Lightbulb, Home, Trophy, Tent, Goal, GraduationCap, Sparkles, Shield, Target, Eye } from "lucide-react";
+import { Heart, Utensils, BookOpen, Users, HandHeart, ArrowRight, RefreshCw, ShieldCheck, HeartPulse, Briefcase, Megaphone, Handshake, Siren, Lightbulb, Home, Trophy, Tent, Goal, GraduationCap, Sparkles, Shield, Target, Eye, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import HeroCarousel from "@/components/HeroCarousel";
 import SectionHeading from "@/components/SectionHeading";
@@ -16,6 +16,7 @@ import cheerfull from "@/assets/logos/cheerfull.jpg";
 import kids from "@/assets/logos/kids.jpg";
 import hero from "@/assets/logos/hero.jpg";
 import logo from "@/assets/logos/watermark.png";
+import smallStepsLogo from "@/assets/logos/small-steps-project-logo.jpeg";
 
 const programs = [
   { icon: Utensils, title: "Feeding Program", desc: "Regular meals for children and vulnerable families facing food insecurity." },
@@ -298,30 +299,60 @@ const Index = () => (
     </section>
 
     {/* Partners */}
-    {/* <section className="py-20 md:py-28 bg-muted">
+    <section className="py-20 md:py-28 bg-muted">
       <div className="container">
         <ScrollReveal>
-          <SectionHeading title="Our Partners" subtitle="We are grateful for the support of friends and organizations" />
+          <SectionHeading title="Our Partner" subtitle="Working together to create lasting change" />
         </ScrollReveal>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 items-center max-w-4xl mx-auto">
-          {partners.map((p, i) => (
-            <ScrollReveal key={p.name} delay={i * 120} direction="scale">
-              <div className="bg-background rounded-xl p-8 text-center shadow-sm border hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
-                <img
-                  src={p.logo}
-                  alt={p.name}
-                  className="w-20 h-20 mx-auto mb-4 object-contain group-hover:scale-110 transition-transform duration-300"
-                  width={512}
-                  height={512}
-                  loading="lazy"
-                />
-                <p className="font-display font-semibold text-foreground text-sm">{p.name}</p>
+
+        <ScrollReveal direction="scale">
+          <div className="max-w-5xl mx-auto bg-background rounded-2xl p-8 md:p-12 shadow-xl border">
+            <div className="grid md:grid-cols-[280px_1fr] gap-10 items-start">
+              <div className="flex flex-col items-center text-center md:sticky md:top-28">
+                <div className="bg-white rounded-xl p-6 shadow-sm border mb-4 w-full">
+                  <img
+                    src={smallStepsLogo}
+                    alt="Small Steps Project logo"
+                    className="w-full max-w-[220px] mx-auto object-contain"
+                    loading="lazy"
+                  />
+                </div>
+                <p className="font-display font-semibold text-foreground">Small Steps Project</p>
+                <p className="text-sm text-muted-foreground">UK-based charity</p>
               </div>
-            </ScrollReveal>
-          ))}
-        </div>
+
+              <div>
+                <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
+                  Supporting vulnerable children in Mathare
+                </h3>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Small Steps Project is a UK-based charity dedicated to supporting children living in landfill communities and other vulnerable environments around the world. Through education, nutrition, healthcare, child protection, and essential support, the organization helps children build safer and brighter futures.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mb-8">
+                  Blossoms of Ghetto is proud to partner with Small Steps Project to support vulnerable children in Mathare, including those living in communities around the Dandora landfill. Together, we are working to improve children's access to nutritious meals, education, hygiene, healthcare, and opportunities that enable them to learn, grow, and reach their full potential. This partnership reflects our shared belief that every child deserves a safe and hopeful future.
+                </p>
+
+                <h4 className="font-display text-lg font-semibold text-foreground mb-4">Areas of Support</h4>
+                <div className="grid sm:grid-cols-2 gap-3">
+                  {[
+                    "Nutrition and feeding programmes",
+                    "Education and learning support",
+                    "School shoes and essential items",
+                    "Hygiene and child wellbeing",
+                    "Safe community spaces for children",
+                  ].map((item) => (
+                    <div key={item} className="flex items-start gap-3 bg-secondary/30 rounded-lg p-3">
+                      <Check className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                      <span className="text-foreground text-sm font-medium">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </ScrollReveal>
       </div>
-    </section> */}
+    </section>
 
     {/* CTA */}
     <section className="py-20 md:py-28 bg-primary text-primary-foreground text-center">
