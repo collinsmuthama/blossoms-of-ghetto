@@ -16,7 +16,7 @@ import cheerfull from "@/assets/logos/cheerfull.jpg";
 import kids from "@/assets/logos/kids.jpg";
 import hero from "@/assets/logos/hero.jpg";
 import logo from "@/assets/logos/watermark.png";
-import smallStepsLogo from "@/assets/logos/small-steps-project-logo.jpeg.asset.json";
+import smallStepsLogo from "@/assets/logos/small-steps-project-logo.jpeg";
 
 const programs = [
   { icon: Utensils, title: "Feeding Program", desc: "Regular meals for children and vulnerable families facing food insecurity." },
