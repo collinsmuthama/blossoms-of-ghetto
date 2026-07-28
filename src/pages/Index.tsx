@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Heart, Utensils, BookOpen, Users, HandHeart, ArrowRight, RefreshCw, ShieldCheck, HeartPulse, Briefcase, Megaphone, Handshake, Siren, Lightbulb, Home, Trophy, Tent, Goal, GraduationCap, Sparkles, Shield, Target, Eye } from "lucide-react";
+import { Heart, Utensils, BookOpen, Users, HandHeart, ArrowRight, RefreshCw, ShieldCheck, HeartPulse, Briefcase, Megaphone, Handshake, Siren, Lightbulb, Home, Trophy, Tent, Goal, GraduationCap, Sparkles, Shield, Target, Eye, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import HeroCarousel from "@/components/HeroCarousel";
 import SectionHeading from "@/components/SectionHeading";
@@ -16,6 +16,7 @@ import cheerfull from "@/assets/logos/cheerfull.jpg";
 import kids from "@/assets/logos/kids.jpg";
 import hero from "@/assets/logos/hero.jpg";
 import logo from "@/assets/logos/watermark.png";
+import smallStepsLogo from "@/assets/logos/small-steps-project-logo.jpeg.asset.json";
 
 const programs = [
   { icon: Utensils, title: "Feeding Program", desc: "Regular meals for children and vulnerable families facing food insecurity." },
